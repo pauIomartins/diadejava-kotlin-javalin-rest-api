@@ -1,0 +1,37 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.50'
+}
+
+group 'br.com.diadejava.'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    implementation 'io.javalin:javalin:3.4.1'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.0.pr1'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.10.0.pr1'
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.10.0.pr1'
+
+    implementation 'org.koin:koin-core:2.0.1'
+
+    implementation 'org.jetbrains.exposed:exposed:0.17.2'
+    implementation 'com.h2database:h2'
+    implementation 'io.azam.ulidj:ulidj:1.0.0'
+
+    implementation 'org.slf4j:slf4j-simple:1.7.26'
+    implementation 'org.apache.logging.log4j:log4j-api:2.12.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.12.1'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
